@@ -67,12 +67,20 @@ export default {
 .video__player {
   margin-top: 84px;
   min-height: 440px;
+  height: 100%;
   max-width: 770px;
+  width: 100%;
   background: #201e1c;
   border-radius: 20px;
 
   & img {
     cursor: pointer;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    background-color: green;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="tt">
+  <div>
     <the-header />
     <the-prices />
     <the-video />
@@ -21,7 +21,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tt {
-  width: 100%;
-}
 </style>

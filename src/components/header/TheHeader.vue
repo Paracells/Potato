@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="header w-100 h-100 header__background d-flex flex-column">
+    <div class="header header__background d-flex flex-column">
       <div class="d-flex justify-content-around padding_top">
         <svg
           width="61"
@@ -50,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav header__menu d-flex align-items-baseline">
                 <li class="nav-item header__menu-item">Цены</li>
-                <li class="nav-item header__menu-item">Видео</li>
+                <li class="nav-item header__menu-item active-border">Видео</li>
                 <li class="nav-item header__menu-item">О нас</li>
                 <li class="nav-item header__menu-item active">
                   Оставить заявку
@@ -85,6 +85,8 @@ export default {
         rgba(225, 186, 110, 0.7) 100%
       ),
       url("../../assets/images/header/background.png") center/cover no-repeat;
+    width: auto;
+    max-width: 100%;
   }
 }
 
