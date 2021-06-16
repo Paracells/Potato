@@ -34,13 +34,30 @@
             fill="white"
           />
         </svg>
-        <nav>
-          <ul class="list-unstyled d-flex align-items-baseline header__menu">
-            <li class="header__menu-item">Цены</li>
-            <li class="header__menu-item active-border">Видео</li>
-            <li class="header__menu-item">О нас</li>
-            <li class="header__menu-item active">Оставить заявку</li>
-          </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav header__menu d-flex align-items-baseline">
+                <li class="nav-item header__menu-item">Цены</li>
+                <li class="nav-item header__menu-item">Видео</li>
+                <li class="nav-item header__menu-item">О нас</li>
+                <li class="nav-item header__menu-item active">
+                  Оставить заявку
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
       <div class="text-center text-uppercase header__center-text my-auto">
