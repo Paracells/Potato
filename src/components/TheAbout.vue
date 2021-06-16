@@ -28,7 +28,36 @@
         который и решает дело.
       </p>
     </div>
-    <div class="form__main mx-auto"></div>
+    <div class="position-relative">
+      <img
+        src="../assets/images/about/bottom.png"
+        alt="potato"
+        class="position-absolute bottom__img"
+      />
+    </div>
+    <div class="form__main mx-auto position-relative">
+      <div class="form__text">Оставить заявку</div>
+      <div class="form__place mx-auto form__input">
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Имя"
+          />
+          <label for="floatingInput">Имя</label>
+        </div>
+        <div class="form-floating form__second-margin">
+          <input
+            type="tel"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Номер телефона"
+          />
+          <label for="floatingInput">Номер телефона</label>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -69,10 +98,53 @@ export default {
 .left__top-img {
   margin-top: -90px;
 }
+.bottom__img {
+  right: -50px;
+  bottom: -295px;
+  z-index: 50;
+}
 .form__main {
   min-height: 494px;
   max-width: 970px;
   background: #35312d;
   border-radius: 20px;
+  z-index: 100;
+
+  & .form__text {
+    padding-top: 59px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    color: #ffffff;
+  }
+  & .form__input {
+    padding-top: 46px;
+  }
+}
+.form__place {
+  max-width: 370px;
+  width: 100%;
+}
+.active {
+  border: none;
+  outline: none;
+  margin-top: 65px;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 13px 32px 13px 32px;
+  border-radius: 30px;
+  font-weight: 500;
+  margin-right: 0;
+  background-color: #ecba46;
+  color: #333333;
+
+  &:hover {
+    background-color: #ffd573;
+    color: black;
+  }
+}
+.form__second-margin {
+  margin-top: 20px;
 }
 </style>
