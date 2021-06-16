@@ -1,20 +1,22 @@
 <template>
   <div>
-    <the-header/>
-    <the-prices/>
-    <the-video/>
-    <the-about/>
+    <the-header />
+    <the-prices />
+    <the-video />
+    <the-about />
+    <the-footer />
   </div>
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
-import ThePrices from "./components/ThePrices.vue";
+import TheHeader from "./components/header/TheHeader.vue";
+import ThePrices from "./components/prices/ThePrices.vue";
 import TheVideo from "./components/TheVideo.vue";
 import TheAbout from "./components/TheAbout.vue";
+import TheFooter from "./components/footer/TheFooter.vue";
 
 export default {
-  components: {TheAbout, TheVideo, ThePrices, TheHeader},
+  components: { TheAbout, TheVideo, ThePrices, TheHeader, TheFooter },
 };
 </script>
 

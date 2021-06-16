@@ -1,39 +1,38 @@
 <template>
   <section class="slider mx-auto">
     <swiper :navigation="true" :loop="true" class="mySwiper">
-      <swiper-slide><img src="../assets/images/carousel/1.png" alt="">
+      <swiper-slide
+        ><img src="../../assets/images/carousel/1.png" alt="" />
         <div class="slider__text">Столовый картофель</div>
         <div class="slider__text-price">142₽</div>
       </swiper-slide>
-      <swiper-slide><img src="../assets/images/carousel/2.png" alt="">
+      <swiper-slide
+        ><img src="../../assets/images/carousel/2.png" alt="" />
         <div class="slider__text">Деревенский картофель</div>
         <div class="slider__text-price">129₽</div>
       </swiper-slide>
-      <swiper-slide><img src="../assets/images/carousel/3.png" alt="">
+      <swiper-slide
+        ><img src="../../assets/images/carousel/3.png" alt="" />
         <div class="slider__text">Домашний картофель</div>
         <div class="slider__text-price">133₽</div>
       </swiper-slide>
     </swiper>
-
   </section>
 </template>
 <script>
 // Import Swiper Vue.js components
-import {Swiper, SwiperSlide} from 'swiper/vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
-import 'swiper/swiper.scss';
+import "swiper/swiper.scss";
 
-import "swiper/components/navigation/navigation.min.css"
+import "swiper/components/navigation/navigation.min.css";
 
 // import Swiper core and required modules
-import SwiperCore, {
-  Navigation
-} from 'swiper/core';
+import SwiperCore, { Navigation } from "swiper/core";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
-
 
 export default {
   components: {
@@ -43,19 +42,19 @@ export default {
   data() {
     return {};
   },
-  methods: {}
-
-}
+  methods: {},
+};
 </script>
 <style lang="scss">
+$text_color: #ecba46;
 
-$text_color: #ECBA46;
-
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   color: $text_color;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-button-prev:after {
   font-size: 4rem;
 }
 

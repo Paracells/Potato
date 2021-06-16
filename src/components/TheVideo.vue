@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import TheText from "./TheText.vue";
+import TheText from "./common/TheText.vue";
 
 export default {
   name: "TheVideo",

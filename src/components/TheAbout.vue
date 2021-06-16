@@ -51,10 +51,10 @@
           <input
             type="tel"
             class="form-control"
-            id="floatingInput"
+            id="floatingPhone"
             placeholder="Номер телефона"
           />
-          <label for="floatingInput">Номер телефона</label>
+          <label for="floatingPhone">Номер телефона</label>
         </div>
         <button class="active">Оставить заявку</button>
       </div>
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import TheText from "./TheText.vue";
+import TheText from "./common/TheText.vue";
 
 export default {
   name: "TheAbout",

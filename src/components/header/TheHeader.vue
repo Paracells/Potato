@@ -67,7 +67,7 @@ export default {
         rgba(225, 186, 110, 0) 0%,
         rgba(225, 186, 110, 0.7) 100%
       ),
-      url("../assets/images/header/background.png") center/cover no-repeat;
+      url("../../assets/images/header/background.png") center/cover no-repeat;
   }
 }
 
