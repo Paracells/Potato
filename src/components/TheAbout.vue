@@ -37,7 +37,7 @@
     </div>
     <div class="form__main mx-auto position-relative">
       <div class="form__text">Оставить заявку</div>
-      <div class="form__place mx-auto form__input">
+      <div class="form__place mx-auto text-center form__input">
         <div class="form-floating">
           <input
             type="email"
@@ -56,6 +56,7 @@
           />
           <label for="floatingInput">Номер телефона</label>
         </div>
+        <button class="active">Оставить заявку</button>
       </div>
     </div>
   </section>
@@ -71,6 +72,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$main: #746b61;
+.form-control {
+  background-color: transparent;
+}
+.form-control {
+  border-color: $main;
+  color: #fff;
+
+  &:focus {
+    background-color: transparent;
+    border-color: #fff;
+    box-shadow: none;
+    color: #fff;
+  }
+}
+
+.form-floating > label {
+  color: $main;
+}
 .margin__top {
   margin-top: 89px;
   margin-left: 198px;
@@ -129,6 +149,8 @@ export default {
 .active {
   border: none;
   outline: none;
+  max-width: 240px;
+  width: 100%;
   margin-top: 65px;
   font-size: 20px;
   line-height: 24px;
