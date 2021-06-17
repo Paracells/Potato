@@ -1,32 +1,32 @@
 <template>
-  <section class="margin__section">
+  <section class="margin__section mx-auto">
     <div class="video__section">
       <div class="center__section">
         <the-text text="Видео" text-color="white" />
-      </div>
-      <div
-        class="
-          video__player
-          mx-auto
-          d-flex
-          justify-content-center
-          align-items-center
-        "
-      >
-        <img
-          v-if="!show"
-          src="../assets/images/video/Subtract.png"
-          alt="play"
-          @click="show = true"
-        />
-        <iframe
-          v-else
-          id="ytplayer"
-          type="text/html"
-          width="770"
-          height="440"
-          src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-        />
+        <div
+          class="
+            video__player
+            mx-auto
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+        >
+          <img
+            v-if="!show"
+            src="../assets/images/video/Subtract.png"
+            alt="play"
+            @click="show = true"
+          />
+          <iframe
+            v-else
+            id="ytplayer"
+            type="text/html"
+            width="770"
+            height="440"
+            src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -49,8 +49,8 @@ export default {
 <style lang="scss" scoped>
 .margin__section {
   margin-top: 149px;
-  margin-right: 60px;
-  margin-left: 60px;
+  max-width: 1800px;
+  width: 100%;
 }
 
 .video__section {
@@ -78,9 +78,22 @@ export default {
   }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   body {
     background-color: green;
+  }
+
+  .center__section {
+    padding-top: 40px;
+  }
+  .video__section {
+    min-height: 400px;
+  }
+  .video__player {
+    min-height: 178px;
+    max-width: 310px;
+    width: 100%;
+    margin-top: 43px;
   }
 }
 </style>
