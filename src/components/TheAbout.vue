@@ -8,15 +8,7 @@
         class="position-absolute left__top-img"
       />
     </div>
-    <div
-      class="
-        d-flex
-        girl__text
-        justify-content-around
-        mx-auto
-        girl__image-margin
-      "
-    >
+    <div class="d-flex girl__text justify-content-around mx-auto girl__image">
       <img src="../assets/images/about/left2.png" alt="potato" />
       <p class="girl__text-margin">
         Если картошка, запеченная в духовке, получается не всегда такой как
@@ -35,8 +27,18 @@
         class="position-absolute bottom__img"
       />
     </div>
-    <div class="form__main mx-auto position-relative">
-      <div class="form__text">Оставить заявку</div>
+    <div
+      class="
+        form__main
+        position-relative
+        mx-auto
+        d-flex
+        flex-column
+        justify-content-around
+        align-items-center
+      "
+    >
+      <div class="form__text">{{ text }}</div>
       <div class="form__place mx-auto text-center form__input">
         <div class="form-floating">
           <input
@@ -56,7 +58,7 @@
           />
           <label for="floatingPhone">Номер телефона</label>
         </div>
-        <button class="active">Оставить заявку</button>
+        <button class="active">{{ text }}</button>
       </div>
     </div>
   </section>
@@ -68,6 +70,11 @@ import TheText from "./common/TheText.vue";
 export default {
   name: "TheAbout",
   components: { TheText },
+  data() {
+    return {
+      text: "Оставить заявку",
+    };
+  },
 };
 </script>
 
@@ -93,8 +100,6 @@ $main: #746b61;
 }
 .margin__top {
   margin-top: 89px;
-  margin-left: 198px;
-  margin-right: 149px;
 }
 
 .girl__text {
@@ -111,12 +116,21 @@ $main: #746b61;
     margin-top: 16px;
   }
 }
-.girl__image-margin {
+.girl__image {
   margin-top: 59px;
+  position: relative;
+  z-index: 100;
+}
+
+.girl__image > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .left__top-img {
   margin-top: -90px;
+  z-index: 10;
 }
 .bottom__img {
   right: -50px;
@@ -151,7 +165,7 @@ $main: #746b61;
   outline: none;
   max-width: 240px;
   width: 100%;
-  margin-top: 65px;
+  margin-bottom: 85px;
   font-size: 20px;
   line-height: 24px;
   padding: 13px 32px 13px 32px;
@@ -168,5 +182,45 @@ $main: #746b61;
 }
 .form__second-margin {
   margin-top: 20px;
+  margin-bottom: 65px;
+}
+
+@media (min-width: 1200px) {
+  .margin__top {
+    margin-top: 89px;
+    margin-left: 198px;
+    margin-right: 149px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left__top-img,
+  .bottom__img {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .girl__image {
+    max-width: 450px;
+    max-height: 290px;
+  }
+  .form__main {
+    min-height: 400px;
+    border-radius: 0;
+
+    & .form__text {
+      padding-top: 40px;
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  .form-floating {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .active {
+    margin-bottom: 65px;
+  }
 }
 </style>

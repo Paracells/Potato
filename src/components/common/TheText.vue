@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="d-flex flex-column">
+    <div>
       <p class="price__name">
         <span class="span" :style="{ color: textColor }">{{ text }}</span>
       </p>
