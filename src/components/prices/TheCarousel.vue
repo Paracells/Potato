@@ -1,11 +1,11 @@
 <template>
   <section class="slider mx-auto">
     <carousel :items-to-show="1" :wrap-around="true">
-      <slide v-for="slide in slides" :key="slide">
+      <slide v-for="slide in slides" :key="slide.name">
         <div class="d-flex flex-column justify-content-center align-items-center">
           <img class="slider-img"
                :src="slide.img"
-               alt="slide"
+               :alt="slide.name"
           />
           <div class="slider__text">{{ slide.name }}</div>
           <div class="slider__text-price">{{ slide.price }}₽</div>
@@ -36,13 +36,13 @@ export default {
       flag: false,
       slides: [
         {
-          img: './public/carousel/1.png', name: 'Столовый картофель', price: 142
+          img: require('@/assets/images/carousel/1.png'), name: 'Столовый картофель', price: 142
         },
         {
-          img: './public/carousel/2.png', name: 'Деревенский картофель', price: 129
+          img: require('@/assets/images/carousel/2.png'), name: 'Деревенский картофель', price: 129
         },
         {
-          img: './public/carousel/3.png', name: 'Домашний картофель', price: 133
+          img: require('@/assets/images/carousel/3.png'), name: 'Домашний картофель', price: 133
         },
       ]
     };
