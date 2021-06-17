@@ -8,9 +8,13 @@
         class="position-absolute left__top-img"
       />
     </div>
-    <div class="d-flex girl__text justify-content-around mx-auto girl__image">
-      <img src="../assets/images/about/left2.png" alt="potato" />
-      <p class="girl__text-margin">
+    <div class="img__container">
+      <img
+        src="../assets/images/about/left2.png"
+        alt="girl"
+        class="girl__image"
+      />
+      <p class="girl__text">
         Если картошка, запеченная в духовке, получается не всегда такой как
         хочется (сухая или наоборот мокрая, сыроватая внутри, недостаточно
         удачная по специям) — дайте шанс этому рецепту. <br /><br />
@@ -102,10 +106,14 @@ $main: #746b61;
   margin-top: 89px;
 }
 
+.img__container {
+  display: flex;
+  justify-content: center;
+}
 .girl__text {
-  max-width: 690px;
+  max-width: 400px;
   width: 100%;
-
+  margin-top: 76px;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -120,6 +128,9 @@ $main: #746b61;
   margin-top: 59px;
   position: relative;
   z-index: 100;
+  float: left;
+  /* display: flex;
+  justify-content: space-around; */
 }
 
 .girl__image > img {
@@ -135,7 +146,7 @@ $main: #746b61;
 .bottom__img {
   right: -50px;
   bottom: -295px;
-  z-index: 50;
+  z-index: -1;
 }
 .form__main {
   min-height: 494px;
@@ -193,7 +204,7 @@ $main: #746b61;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .left__top-img,
   .bottom__img {
     display: none;
@@ -201,10 +212,6 @@ $main: #746b61;
 }
 
 @media (max-width: 576px) {
-  .girl__image {
-    max-width: 450px;
-    max-height: 290px;
-  }
   .form__main {
     min-height: 400px;
     border-radius: 0;
@@ -221,6 +228,31 @@ $main: #746b61;
   }
   .active {
     margin-bottom: 65px;
+  }
+
+  .img__container {
+    position: relative;
+  }
+
+  .girl__image {
+    opacity: 0.4;
+    margin-top: -71px;
+    margin-left: -285px;
+  }
+  .girl__text {
+    position: absolute;
+    right: 75px;
+    top: 21px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    margin-top: 0;
+    max-width: 238px;
+    width: 100%;
+  }
+  .margin__top {
+    margin-top: 50px;
   }
 }
 </style>
