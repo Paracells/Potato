@@ -1,27 +1,28 @@
 <template>
   <section>
     <div class="d-flex flex-column">
-      <p class="price__name"><span class="span" :style="{color: textColor}">{{ text }}</span></p>
+      <p class="price__name">
+        <span class="span" :style="{ color: textColor }">{{ text }}</span>
+      </p>
     </div>
   </section>
 </template>
 
 <script>
-
 export default {
   name: "TheText",
   props: {
     text: {
       type: String,
       required: true,
-      default: ''
+      default: "",
     },
     textColor: {
       type: String,
-      default: 'black'
-    }
-  }
-}
+      default: "black",
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -34,8 +35,12 @@ export default {
 
   & span {
     padding-bottom: 15px;
-    border-bottom: 10px solid #ECBA46;
+    border-bottom: 10px solid #ecba46;
   }
 }
-
+@media (max-width: 576px) {
+  .span {
+    font-size: 40px;
+  }
+}
 </style>
