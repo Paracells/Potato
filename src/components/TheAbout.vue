@@ -1,23 +1,23 @@
 <template>
   <section class="margin__top">
-    <the-text text="О нас" />
+    <the-text text="О нас"/>
     <div class="position-relative">
       <img
-        src="../assets/images/about/left.png"
-        alt="potato"
-        class="position-absolute left__top-img"
+          src="../assets/images/about/left.png"
+          alt="potato"
+          class="position-absolute left__top-img"
       />
     </div>
     <div class="img__container">
       <img
-        src="../assets/images/about/left2.png"
-        alt="girl"
-        class="girl__image"
+          src="../assets/images/about/left2.png"
+          alt="girl"
+          class="girl__image"
       />
       <p class="girl__text">
         Если картошка, запеченная в духовке, получается не всегда такой как
         хочется (сухая или наоборот мокрая, сыроватая внутри, недостаточно
-        удачная по специям) — дайте шанс этому рецепту. <br /><br />
+        удачная по специям) — дайте шанс этому рецепту. <br/><br/>
         Такая картошечка по-деревенски стабильно получается очень вкусная,
         хрустящая снаружи и мягкая, как пюрешка внутри, ароматная — в общем
         пальчики оближешь. Рецепт у меня простой, но с технологическим секретом,
@@ -26,13 +26,13 @@
     </div>
     <div class="position-relative">
       <img
-        src="../assets/images/about/bottom.png"
-        alt="potato"
-        class="position-absolute bottom__img"
+          src="../assets/images/about/bottom.png"
+          alt="potato"
+          class="position-absolute bottom__img"
       />
     </div>
     <div
-      class="
+        class="
         form__main
         position-relative
         mx-auto
@@ -46,19 +46,19 @@
       <div class="form__place mx-auto text-center form__input">
         <div class="form-floating">
           <input
-            type="email"
-            class="form-control"
-            id="floatingInput"
-            placeholder="Имя"
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Имя"
           />
           <label for="floatingInput">Имя</label>
         </div>
         <div class="form-floating form__second-margin">
           <input
-            type="tel"
-            class="form-control"
-            id="floatingPhone"
-            placeholder="Номер телефона"
+              type="tel"
+              class="form-control"
+              id="floatingPhone"
+              placeholder="Номер телефона"
           />
           <label for="floatingPhone">Номер телефона</label>
         </div>
@@ -73,7 +73,7 @@ import TheText from "./common/TheText.vue";
 
 export default {
   name: "TheAbout",
-  components: { TheText },
+  components: {TheText},
   data() {
     return {
       text: "Оставить заявку",
@@ -87,6 +87,7 @@ $main: #746b61;
 .form-control {
   background-color: transparent;
 }
+
 .form-control {
   border-color: $main;
   color: #fff;
@@ -102,6 +103,7 @@ $main: #746b61;
 .form-floating > label {
   color: $main;
 }
+
 .margin__top {
   margin-top: 89px;
 }
@@ -110,6 +112,7 @@ $main: #746b61;
   display: flex;
   justify-content: center;
 }
+
 .girl__text {
   max-width: 400px;
   width: 100%;
@@ -124,6 +127,7 @@ $main: #746b61;
     margin-top: 16px;
   }
 }
+
 .girl__image {
   margin-top: 59px;
   position: relative;
@@ -143,11 +147,13 @@ $main: #746b61;
   margin-top: -90px;
   z-index: 10;
 }
+
 .bottom__img {
   right: -50px;
   bottom: -295px;
   z-index: -1;
 }
+
 .form__main {
   min-height: 494px;
   max-width: 970px;
@@ -163,14 +169,17 @@ $main: #746b61;
     text-align: center;
     color: #ffffff;
   }
+
   & .form__input {
     padding-top: 46px;
   }
 }
+
 .form__place {
   max-width: 370px;
   width: 100%;
 }
+
 .active {
   border: none;
   outline: none;
@@ -191,6 +200,7 @@ $main: #746b61;
     color: black;
   }
 }
+
 .form__second-margin {
   margin-top: 20px;
   margin-bottom: 65px;

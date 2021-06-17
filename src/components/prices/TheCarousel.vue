@@ -1,61 +1,88 @@
 <template>
   <section class="slider mx-auto">
-    <swiper :navigation="true" :loop="true" class="mySwiper">
-      <swiper-slide
-        ><img src="../../assets/images/carousel/1.png" alt="" />
-        <div class="slider__text">Столовый картофель</div>
-        <div class="slider__text-price">142₽</div>
-      </swiper-slide>
-      <swiper-slide
-        ><img src="../../assets/images/carousel/2.png" alt="" />
-        <div class="slider__text">Деревенский картофель</div>
-        <div class="slider__text-price">129₽</div>
-      </swiper-slide>
-      <swiper-slide
-        ><img src="../../assets/images/carousel/3.png" alt="" />
-        <div class="slider__text">Домашний картофель</div>
-        <div class="slider__text-price">133₽</div>
-      </swiper-slide>
-    </swiper>
+    <carousel :items-to-show="1" :wrap-around="true">
+      <slide v-for="slide in slides" :key="slide">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <img class="slider-img"
+               :src="slide.img"
+               alt="slide"
+          />
+          <div class="slider__text">{{ slide.name }}</div>
+          <div class="slider__text-price">{{ slide.price }}₽</div>
+        </div>
+      </slide>
+
+      <template #addons>
+        <navigation v-if="!propSwiper"/>
+        <pagination v-else/>
+      </template>
+    </carousel>
   </section>
 </template>
 <script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
-import "swiper/swiper.scss";
-
-import "swiper/components/navigation/navigation.min.css";
-
-// import Swiper core and required modules
-import SwiperCore, { Navigation } from "swiper/core";
-
-// install Swiper modules
-SwiperCore.use([Navigation]);
+import 'vue3-carousel/dist/carousel.css';
+import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel';
 
 export default {
   components: {
-    Swiper,
-    SwiperSlide,
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
   data() {
-    return {};
+    return {
+      windowWidth: window.innerWidth,
+      flag: false,
+      slides: [
+        {
+          img: './public/carousel/1.png', name: 'Столовый картофель', price: 142
+        },
+        {
+          img: './public/carousel/2.png', name: 'Деревенский картофель', price: 129
+        },
+        {
+          img: './public/carousel/3.png', name: 'Домашний картофель', price: 133
+        },
+      ]
+    };
   },
-  methods: {},
+  mounted() {
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+    };
+  },
+  computed: {
+    propSwiper() {
+      return this.windowWidth < 576;
+    },
+  },
+
 };
 </script>
 <style lang="scss">
 $text_color: #ecba46;
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: $text_color;
+.carousel__pagination {
+  padding: 0;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 4rem;
+.carousel__pagination-button {
+  margin-top: 33px;
+  border-radius: 50%;
+  height: 10px;
+  background-color: #C4C4C4;
+
+  &--active {
+    background-color: $text_color;
+  }
+}
+
+.slider-img {
+  max-height: 254px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .slider {
@@ -80,21 +107,24 @@ $text_color: #ecba46;
   }
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
+.carousel__prev, .carousel__next {
+  height: 82px;
+  width: 44px;
+  background-color: transparent !important;
 }
 
-.swiper-slide {
-  text-align: center;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.carousel__icon {
+  color: $text_color;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg width='44' height='82' viewBox='0 0 44 82' fill='none'><path d='M40 4L5 41L40 78' stroke='#ECBA46' stroke-width='4'/></svg>") !important;
 }
 
-.swiper-slide img {
-  object-fit: cover;
+@media (max-width: 576px) {
+  .slider {
+    &__text {
+      font-size: 20px;
+    }
+
+  }
 }
 </style>
+

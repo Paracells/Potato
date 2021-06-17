@@ -29,5 +29,12 @@ export default {
 }
 .footer__icon {
   margin-top: 30px;
+  margin-bottom: 94px;
+}
+
+@media (max-width: 576px) {
+  .footer__icon {
+    margin-bottom: 76px;
+  }
 }
 </style>

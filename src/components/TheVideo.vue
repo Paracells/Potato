@@ -2,9 +2,9 @@
   <section class="margin__section mx-auto">
     <div class="video__section">
       <div class="center__section">
-        <the-text text="Видео" text-color="white" />
+        <the-text text="Видео" text-color="white"/>
         <div
-          class="
+            class="
             video__player
             mx-auto
             d-flex
@@ -13,19 +13,19 @@
           "
         >
           <img
-            v-if="!show"
-            src="../assets/images/video/Subtract.png"
-            alt="play"
-            @click="show = true"
+              v-if="!show"
+              src="../assets/images/video/Subtract.png"
+              alt="play"
+              @click="show = true"
           />
           <div v-else class="container">
             <iframe
-              frameborder="0"
-              allowfullscreen
-              width="770"
-              height="440"
-              class="video"
-              src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                frameborder="0"
+                allowfullscreen
+                width="770"
+                height="440"
+                class="video"
+                src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
             />
           </div>
         </div>
@@ -39,7 +39,7 @@ import TheText from "./common/TheText.vue";
 
 export default {
   name: "TheVideo",
-  components: { TheText },
+  components: {TheText},
   data() {
     return {
       show: false,
@@ -62,6 +62,7 @@ export default {
     background: #35312d;
     border-radius: 20px;
   }
+
   &__player {
     margin-top: 84px;
     min-height: 440px;
@@ -86,6 +87,7 @@ export default {
   height: 0;
   padding: 28.55%;
 }
+
 .video {
   position: absolute;
   top: 0;
