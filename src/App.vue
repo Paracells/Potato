@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <the-header />
-    <the-prices />
-    <the-video />
-    <the-about />
-    <the-footer />
+  <div class="tt">
+    <the-header/>
+    <the-prices/>
+    <the-video/>
+    <the-about/>
+    <the-footer/>
   </div>
 </template>
 
@@ -16,9 +16,12 @@ import TheAbout from "./components/TheAbout.vue";
 import TheFooter from "./components/footer/TheFooter.vue";
 
 export default {
-  components: { TheAbout, TheVideo, ThePrices, TheHeader, TheFooter },
+  components: {TheAbout, TheVideo, ThePrices, TheHeader, TheFooter},
 };
 </script>
 
 <style lang="scss" scoped>
+.tt {
+  overflow-x: hidden;
+}
 </style>
