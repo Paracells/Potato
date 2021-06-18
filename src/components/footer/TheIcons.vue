@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-center footer__flex-icons">
+  <div class="footer__flex-icons">
     <svg
       @mouseenter="changeColor(0)"
       @mouseleave="backColor(0)"
