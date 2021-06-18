@@ -1,5 +1,5 @@
 <template>
-  <div class="tt">
+  <div class="base__value mx-auto">
     <the-header/>
     <the-prices/>
     <the-video/>
@@ -21,7 +21,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tt {
+.base__value {
   overflow-x: hidden;
+  max-width: 1920px;
+  width: 100%;
+
 }
 </style>

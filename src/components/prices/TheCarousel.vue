@@ -2,26 +2,25 @@
   <section class="slider mx-auto">
     <carousel :items-to-show="1" :wrap-around="true">
       <slide v-for="slide in slides" :key="slide.name">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <img class="slider-img"
-               :src="slide.img"
-               :alt="slide.name"
-          />
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <img class="slider-img" :src="slide.img" :alt="slide.name" />
           <div class="slider__text">{{ slide.name }}</div>
           <div class="slider__text-price">{{ slide.price }}₽</div>
         </div>
       </slide>
 
       <template #addons>
-        <navigation v-if="!propSwiper"/>
-        <pagination v-else/>
+        <navigation v-if="!propSwiper" />
+        <pagination v-else />
       </template>
     </carousel>
   </section>
 </template>
 <script>
-import 'vue3-carousel/dist/carousel.css';
-import {Carousel, Slide, Pagination, Navigation} from 'vue3-carousel';
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 export default {
   components: {
@@ -36,15 +35,21 @@ export default {
       flag: false,
       slides: [
         {
-          img: require('@/assets/images/carousel/1.png'), name: 'Столовый картофель', price: 142
+          img: require("@/assets/images/carousel/1.png"),
+          name: "Столовый картофель",
+          price: 142,
         },
         {
-          img: require('@/assets/images/carousel/2.png'), name: 'Деревенский картофель', price: 129
+          img: require("@/assets/images/carousel/2.png"),
+          name: "Деревенский картофель",
+          price: 129,
         },
         {
-          img: require('@/assets/images/carousel/3.png'), name: 'Домашний картофель', price: 133
+          img: require("@/assets/images/carousel/3.png"),
+          name: "Домашний картофель",
+          price: 133,
         },
-      ]
+      ],
     };
   },
   mounted() {
@@ -57,7 +62,6 @@ export default {
       return this.windowWidth < 576;
     },
   },
-
 };
 </script>
 <style lang="scss">
@@ -71,7 +75,7 @@ $text_color: #ecba46;
   margin-top: 33px;
   border-radius: 50%;
   height: 10px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 
   &--active {
     background-color: $text_color;
@@ -107,7 +111,8 @@ $text_color: #ecba46;
   }
 }
 
-.carousel__prev, .carousel__next {
+.carousel__prev,
+.carousel__next {
   height: 82px;
   width: 44px;
   background-color: transparent !important;
@@ -123,7 +128,6 @@ $text_color: #ecba46;
     &__text {
       font-size: 20px;
     }
-
   }
 }
 </style>

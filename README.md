@@ -1,4 +1,4 @@
-# Potato
+# [Potato](https://kind-lamport-909fbc.netlify.app/)
 
 A little Vue app
 
