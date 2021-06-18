@@ -146,7 +146,6 @@ export default {
 
 .mobile__nav {
   background-color: #fff;
-  max-width: 380px;
   width: 100%;
   min-height: 800px;
   height: 100%;

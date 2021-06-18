@@ -2,7 +2,7 @@
   <footer class="margin__top">
     <div class="footer__header">КАРТОШЕЧКА</div>
     <div class="footer__icon">
-      <the-icons d-flex justify-content-center  />
+      <the-icons class="d-flex justify-content-center"  />
     </div>
   </footer>
 </template>
