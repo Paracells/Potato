@@ -158,8 +158,8 @@ export default {
 
 .close__icon {
   position: absolute;
-  top: 47px;
-  right: 35px;
+  top: 56px;
+  right: 23px;
 }
 
 .menu__container {
@@ -260,15 +260,29 @@ export default {
   }
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */
+{
+  opacity: 0;
+}
+
 @media (max-width: 575.98px) {
   .header {
     &__center-text {
       font-size: 92px;
       line-height: 112px;
     }
+  }
+}
 
+@media (max-width: 991px) {
+  .header {
     min-height: 800px;
   }
+
 }
 
 .navbar-dark {
